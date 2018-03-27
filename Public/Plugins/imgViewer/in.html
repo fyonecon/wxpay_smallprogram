@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<title>JS/jQueryͼƬ�鿴��viewer.js��ʾ-jQuery�汾_jq22</title>
+<link rel="stylesheet" href="viewer.min.css">
+<style>
+* { margin: 0; padding: 0;}
+#jq22 { width: 700px; margin: 0 auto; font-size: 0;}
+#jq22 li { display: inline-block; width: 32%; margin-left: 1%; padding-top: 1%;}
+#jq22 li img { width: 100%;}
+</style>
+</head>
+
+<body>
+<h1>jQuery�汾</h1>
+
+<ul id="jq22">
+	<li><img data-original="img/tibet-1.jpg" src="img/thumbnails/tibet-1.jpg" alt="ͼƬ1"></li>
+	<li><img data-original="img/tibet-2.jpg" src="img/thumbnails/tibet-2.jpg" alt="ͼƬ2"></li>
+	<li><img data-original="img/tibet-3.jpg" src="img/thumbnails/tibet-3.jpg" alt="ͼƬ3"></li>
+	<li><img data-original="img/tibet-4.jpg" src="img/thumbnails/tibet-4.jpg" alt="ͼƬ4"></li>
+	<li><img data-original="img/tibet-5.jpg" src="img/thumbnails/tibet-5.jpg" alt="ͼƬ5"></li>
+	<li><img data-original="img/tibet-6.jpg" src="img/thumbnails/tibet-6.jpg" alt="ͼƬ6"></li>
+</ul>
+
+<script src="jquery.min.js"></script>
+<script src="viewer-jquery.min.js"></script>
+<script>
+$(function() {
+	$('#jq22').viewer({
+		url: 'data-original',
+	});
+});
+</script>
+

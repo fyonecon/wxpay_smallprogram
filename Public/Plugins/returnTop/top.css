@@ -1,0 +1,26 @@
+
+.returnTop{
+    position: fixed;
+    width: 38px;
+    height: 45px;
+    line-height: 45px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 5px;
+    bottom: 75px;
+    right: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    z-index: 9999;
+    cursor: pointer;
+    overflow: hidden;
+    display: none;
+    /*text-overflow: ellipsis;*/
+}
+.returnTop:active{
+    outline:1px solid #fefefe;
+    outline-offset:-1px;
+}
+.returnTop:hover{
+    opacity: 0.8;
+}

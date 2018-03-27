@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<title>Video.js 6.2.8</title>
+	<script src="js/jquery1.10.2.min.js"></script>
+</head>
+
+<body>
+	<!--开始-视频播放器-->
+	<link href="css/video-js.css" rel="stylesheet">
+	
+	<div class="kd-video-content"  oncontextmenu="return false" onselectstart="return false">
+		<div class="kd-video-title">视频标题</div>
+		<video id="kd-video" class="kd-video video-js" controls preload="auto"
+		  poster="m.jpg" data-setup="{}">
+			<source src="../../2.mp4" type="video/mp4">
+		</video>
+	</div>
+	<div class="kd-video-content"  oncontextmenu="return false" onselectstart="return false">
+		<div class="kd-video-title">视频标题2</div>
+		<video id="kd-video" class="kd-video video-js" controls preload="auto"
+		  poster="m.jpg" data-setup="{}">
+			<source src="../../1.mp4" type="video/mp4">
+		</video>
+	</div>
+	
+	
+	<script src="js/video.js"></script>	
+	<script type="text/javascript">
+		var myPlayer = videojs('kd-video');
+		videojs("kd-video").ready(function(){
+			var myPlayer = this;
+			myPlayer.pause();//第一次不要自动播放
+		});
+		run_video();
+		function run_video() {
+			$(".kd-video").height($(".kd-video-content").width()*9/16);//播放器的宽高成固定比例，以响应式
+			$(".vjs-tech").height($(".kd-video-content").width()*9/16);//不同宽高视频成比例
+			setTimeout("run_video()", 800);
+		}
+	</script>
+	<!--结束-视频播放器-->
+	
+</body>
+</html>
+
